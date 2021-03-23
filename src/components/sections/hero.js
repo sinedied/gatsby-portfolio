@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { motion, useAnimation } from "framer-motion";
 
@@ -61,7 +61,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
   }
 `;
 
-const AnimatedUnderlining = motion.custom(Underlining);
+const AnimatedUnderlining = motion(Underlining);
 
 const Hero = ({ content }) => {
   const { frontmatter, body } = content[0].node;
@@ -118,9 +118,9 @@ const Hero = ({ content }) => {
                 animate={eControls}
                 style={{ originX: 0.7, originY: 0.7 }}
               >
-                <Img
+                <GatsbyImage
                   className="emoji"
-                  fluid={frontmatter.icon.childImageSharp.fluid}
+                  image={frontmatter.icon.childImageSharp.gatsbyImageData}
                 />
               </motion.div>
             </div>

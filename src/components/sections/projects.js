@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useContext } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image"
 import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
 
@@ -338,9 +338,9 @@ const Projects = ({ content }) => {
                   <VisibilitySensor
                     onChange={() => setVisibleProject(frontmatter.position)}
                   >
-                    <Img
+                    <GatsbyImage
                       className="screenshot"
-                      fluid={frontmatter.screenshot.childImageSharp.fluid}
+                      image={frontmatter.screenshot.childImageSharp.gatsbyImageData}
                     />
                   </VisibilitySensor>
                 </StyledProject>
