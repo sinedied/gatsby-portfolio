@@ -162,7 +162,7 @@ const Interests = ({ content }) => {
               initial={{ opacity: 0, scaleY: 0 }}
               animate={iControls}
             >
-              <GatsbyImage className="icon" image={icon.childImageSharp.gatsbyImageData} /> {name}
+              <GatsbyImage className="icon" image={icon.childImageSharp.gatsbyImageData} alt=""/> {name}
             </motion.div>
           ))}
           {shownInterests < interests.length && (

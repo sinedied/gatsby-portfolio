@@ -84,6 +84,7 @@ const Contact = ({ content }) => {
           <GatsbyImage
             className="avatar"
             image={frontmatter.profileImage.childImageSharp.gatsbyImageData}
+            alt=""
           />
           <div className="details">
             <strong>{frontmatter.name}</strong>

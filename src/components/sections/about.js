@@ -107,6 +107,7 @@ const About = ({ content }) => {
           <GatsbyImage
             className="about-author"
             image={frontmatter.image.childImageSharp.gatsbyImageData}
+            alt=""
           />
         </motion.div>
       </StyledContentWrapper>

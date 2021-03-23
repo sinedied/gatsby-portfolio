@@ -121,6 +121,7 @@ const Hero = ({ content }) => {
                 <GatsbyImage
                   className="emoji"
                   image={frontmatter.icon.childImageSharp.gatsbyImageData}
+                  alt=""
                 />
               </motion.div>
             </div>

@@ -341,6 +341,7 @@ const Projects = ({ content }) => {
                     <GatsbyImage
                       className="screenshot"
                       image={frontmatter.screenshot.childImageSharp.gatsbyImageData}
+                      alt=""
                     />
                   </VisibilitySensor>
                 </StyledProject>
