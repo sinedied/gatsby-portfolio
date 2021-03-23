@@ -14,7 +14,6 @@
     "gatsby-plugin-gdpr-cookies": "^1.0.14",
     "gatsby-plugin-manifest": "^2.8.0",
     "gatsby-plugin-mdx": "^1.6.0",
-    "gatsby-plugin-netlify": "^2.7.0",
     "gatsby-plugin-offline": "^3.6.0",
     "gatsby-plugin-react-helmet": "^3.6.0",
     "gatsby-plugin-robots-txt": "^1.5.3",
@@ -43,22 +42,12 @@
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-react": "^7.12.10",
-    "@testing-library/cypress": "^7.0.3",
-    "cypress": "^6.1.0",
     "eslint": "^7.15.0",
-    "eslint-config-prettier": "^7.0.0",
     "eslint-loader": "^4.0.2",
-    "eslint-plugin-cypress": "^2.11.2",
     "eslint-plugin-mdx": "^1.8.2",
-    "eslint-plugin-prettier": "^3.2.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "gatsby-plugin-eslint": "^2.0.8",
-    "husky": "^4.3.5",
-    "lint-staged": "^10.5.3",
-    "netlify-plugin-cypress": "^1.4.1",
-    "prettier": "^1.19.1",
-    "start-server-and-test": "^1.12.0"
+    "gatsby-plugin-eslint": "^2.0.8"
   },
   "keywords": [
     "gatsby",
@@ -74,21 +63,11 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop --port 9000",
-    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|graphql|md|mdx)\"",
+    "develop": "gatsby develop",
     "lint": "eslint .",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "test:e2e": "start-server-and-test develop http://localhost:9000 cy:open",
-    "test:e2e:ci": "start-server-and-test serve http://localhost:9000 cy:run"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
