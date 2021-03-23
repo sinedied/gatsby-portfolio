@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
 
-import { navLinks } from "../../config"
+import { navLinks } from "../../config";
 
 const StyledNav = styled.nav`
   display: none;
@@ -51,10 +51,10 @@ const StyledNav = styled.nav`
       color: ${({ theme }) => theme.colors.background};
     }
   }
-`
+`;
 
 const Navbar = () => {
-  const { menu, button } = navLinks
+  const { menu, button } = navLinks;
   return (
     <StyledNav>
       {menu.map(({ name, url }, key) => {
@@ -62,7 +62,7 @@ const Navbar = () => {
           <Link className="nav-link" key={key} to={url}>
             {name}
           </Link>
-        )
+        );
       })}
       {button.useFileName ? (
         <a
@@ -79,7 +79,7 @@ const Navbar = () => {
         </Link>
       )}
     </StyledNav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

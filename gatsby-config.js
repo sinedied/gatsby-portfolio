@@ -7,7 +7,7 @@ const {
   siteUrl,
   googleAnalyticsTrackingId,
   colors,
-} = require(`./config`)
+} = require(`./config`);
 
 module.exports = {
   siteMetadata: {
@@ -84,4 +84,4 @@ module.exports = {
       },
     },
   ],
-}
+};

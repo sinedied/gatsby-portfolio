@@ -1,11 +1,11 @@
-import React, { useContext, useState, useEffect } from "react"
-import styled from "styled-components"
-import CookieConsent from "react-cookie-consent"
-import { useLocation } from "@reach/router"
-import { initializeAndTrack } from "gatsby-plugin-gdpr-cookies"
-import { motion, useAnimation } from "framer-motion"
+import React, { useContext, useState, useEffect } from "react";
+import styled from "styled-components";
+import CookieConsent from "react-cookie-consent";
+import { useLocation } from "@reach/router";
+import { initializeAndTrack } from "gatsby-plugin-gdpr-cookies";
+import { motion, useAnimation } from "framer-motion";
 
-import Context from "../context/"
+import Context from "../context/";
 
 const StyledCookieBar = motion.custom(styled.div`
   position: fixed;
@@ -58,12 +58,12 @@ const StyledCookieBar = motion.custom(styled.div`
     border: none;
     margin: 0;
   }
-`)
+`);
 
 const CookieBar = () => {
-  const location = useLocation()
-  const controls = useAnimation()
-  const { isIntroDone } = useContext(Context).state
+  const location = useLocation();
+  const controls = useAnimation();
+  const { isIntroDone } = useContext(Context).state;
 
   // Display cookie bar after the splashScreen sequence is done
   useEffect(() => {
@@ -72,11 +72,11 @@ const CookieBar = () => {
         opacity: 1,
         y: 0,
         transition: { delay: 1 },
-      })
+      });
     }
-  }, [isIntroDone])
+  }, [isIntroDone]);
 
-  if (!isIntroDone) return null
+  if (!isIntroDone) return null;
 
   return (
     <StyledCookieBar initial={{ opacity: 0, y: 20 }} animate={controls}>
@@ -93,7 +93,7 @@ const CookieBar = () => {
         <p className="cookieMessage">This website uses cookies 🍪 </p>
       </CookieConsent>
     </StyledCookieBar>
-  )
-}
+  );
+};
 
-export default CookieBar
+export default CookieBar;

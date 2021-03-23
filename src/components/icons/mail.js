@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
 const Mail = ({ color }) => {
   return (
@@ -29,15 +29,15 @@ const Mail = ({ color }) => {
         </g>
       </g>
     </svg>
-  )
-}
+  );
+};
 
 Mail.propTypes = {
   color: PropTypes.string,
-}
+};
 
 Mail.defaultProps = {
   color: "#000000",
-}
+};
 
-export default Mail
+export default Mail;
