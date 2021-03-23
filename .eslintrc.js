@@ -7,7 +7,7 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: ["plugin:react/recommended", "plugin:prettier/recommended"],
+  extends: ["plugin:react/recommended"],
   settings: {
     react: {
       version: "detect",
